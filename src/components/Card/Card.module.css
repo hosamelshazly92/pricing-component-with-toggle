@@ -11,7 +11,7 @@
   height: 110%;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .card {
     margin-bottom: 48px;
   }

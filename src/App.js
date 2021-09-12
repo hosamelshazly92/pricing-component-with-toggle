@@ -64,19 +64,23 @@ function App() {
     },
   ];
 
-  const [pricing, setPricing] = useState(monthlyPlans);
+  const [switching, setSwitching] = useState(true);
 
   const handleSwitch = () => {
-    setPricing(pricing === monthlyPlans ? annualPlans : monthlyPlans);
+    setSwitching(!switching);
   };
 
   return (
     <div className={app}>
       <Switch handler={handleSwitch} />
       <div className={container}>
-        {pricing.map((plan) => {
-          return <Card data={plan} key={plan.id} />;
-        })}
+        {switching
+          ? monthlyPlans.map((plan) => {
+              return <Card data={plan} key={plan.id} />;
+            })
+          : annualPlans.map((plan) => {
+              return <Card data={plan} key={plan.id} />;
+            })}
       </div>
     </div>
   );
