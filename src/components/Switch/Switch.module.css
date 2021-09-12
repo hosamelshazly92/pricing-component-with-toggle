@@ -15,47 +15,45 @@
   color: #b1b0c0;
 }
 
-.switcher {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switcher input {
-  opacity: 0;
-  width: 0;
+input[type="checkbox"] {
   height: 0;
+  width: 0;
+  visibility: hidden;
 }
 
-.slider {
-  position: absolute;
+label {
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  text-indent: -9999px;
+  width: 64px;
+  height: 34px;
   background: linear-gradient(90deg, #dcdcfc, #a8a9dd);
-  transition: 0.4s;
+  display: inline-block;
   border-radius: 34px;
+  position: relative;
 }
 
-.slider::before {
-  position: absolute;
+label:after {
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #fff;
-  transition: 0.4s;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 30px;
+  width: 30px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(111, 111, 111);
   border-radius: 50%;
+  transition: all 0.4s ease-in;
 }
 
-input:checked + .slider {
+input:checked + label {
   background: linear-gradient(90deg, #c8c8f0, #737ae2);
 }
 
-input:checked + .slider::before {
-  transform: translateX(26px);
+input:checked + label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 88px;
 }
