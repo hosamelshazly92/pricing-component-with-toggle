@@ -1,0 +1,14 @@
+.price {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+  margin: 32px 0;
+}
+
+.primary {
+  color: #4b4f62;
+}
+
+.secondary {
+  color: #fff;
+}

@@ -7,18 +7,18 @@ import {
   slider,
 } from "./Switch.module.css";
 
-const Switch = () => {
+const Switch = ({ handler }) => {
   return (
     <Fragment>
       <h1 className={heading}>Our Pricing</h1>
 
       <div className={container}>
-        <p className={text}>Annually</p>
+        <p className={text}>Monthly</p>
         <label className={switcher}>
           <input type="checkbox" />
-          <span className={slider}></span>
+          <span onClick={handler} className={slider}></span>
         </label>
-        <p className={text}>Monthly</p>
+        <p className={text}>Annually</p>
       </div>
     </Fragment>
   );

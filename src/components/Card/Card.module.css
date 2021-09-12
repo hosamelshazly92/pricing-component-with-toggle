@@ -1,0 +1,18 @@
+.card {
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 16px #dedee2, 0 8px 64px #f3f4fd;
+  border-radius: 12px;
+}
+
+.primaryCard {
+  background: linear-gradient(90deg, #9fa5f3, #6d71dd);
+  z-index: 1;
+  height: 110%;
+}
+
+@media (max-width: 1400px) {
+  .card {
+    margin-bottom: 48px;
+  }
+}

@@ -1,0 +1,14 @@
+.plan {
+  color: #9a9cac;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.primary {
+  color: #4b4f62;
+}
+
+.secondary {
+  color: #fff;
+}
