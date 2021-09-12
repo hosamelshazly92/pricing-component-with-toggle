@@ -11,6 +11,12 @@
   margin: 16px 0;
 }
 
+@media (max-width: 375px) {
+  .button {
+    width: 260px;
+  }
+}
+
 .primaryBtn {
   background: linear-gradient(90deg, #9fa5f3, #6d71dd);
   border: 1px solid linear-gradient(90deg, #9fa5f3, #6d71dd);
